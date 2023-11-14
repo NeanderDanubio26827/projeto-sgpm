@@ -1,0 +1,11 @@
+.cell-table {
+    color:rgba(102, 112, 133, 1);
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: fit-content;
+    align-self: center;
+}
