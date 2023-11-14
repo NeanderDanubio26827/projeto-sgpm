@@ -73,8 +73,8 @@ export const TableFicha: React.FC<ITable> = (props) => {
                         alignItems="left"
                         className="cell-table"
                         fontSize={"12px"}>
-                        <Th pl={1}>
-                            <Flex align="center" justify={"flex-end"} gap={2}>
+                        <Th>
+                            <Flex align="center" justify={"flex-end"} gap={1}>
                                 <Text textTransform={"capitalize"} >
                                     Ordem
                                 </Text>
@@ -83,8 +83,8 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
-                            <Flex align="center" justify={"flex-end"} gap={2}>
+                        <Th >
+                            <Flex align="center" justify={"flex-end"} gap={1}>
                                 <Text textTransform={"capitalize"} >
                                     Tipo
                                 </Text>
@@ -93,8 +93,8 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" alignItems="center" pl={1} >
-                            <Flex align="center" justify="flex-end" gap={2}>
+                        <Th >
+                            <Flex align="center" justify="flex-end" gap={1}>
                                 <Text textTransform={"capitalize"} >
                                     Subtipo
                                 </Text>
@@ -103,7 +103,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" alignItems="center" pl={1}>
+                        <Th>
                             <Flex align="center" justify={'flex-end'} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     CID
@@ -113,7 +113,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" alignItems="center" gap={2} pl={1}>
+                        <Th>
                             <Flex align="center" justify={"flex-end"} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     CRM Médico
@@ -123,7 +123,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
+                        <Th>
                             <Flex align="center" justify={"flex-end"} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     Início
@@ -134,7 +134,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
+                        <Th>
                             <Flex align="center" justify={"flex-end"} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     Término
@@ -144,7 +144,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
+                        <Th>
                             <Flex align="center" justify={"flex-end"} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     Dias
@@ -154,7 +154,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
+                        <Th>
                             <Flex align="center" justify={"flex-end"} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     Informações
@@ -164,7 +164,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
+                        <Th>
                             <Flex align="center" justify={"flex-end"}>
                                 <Text textTransform={"capitalize"} >
                                     Status
@@ -174,7 +174,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 </Flex>
                             </Flex>
                         </Th>
-                        <Th borderTop="1px solid" pl={1}>
+                        <Th >
                             <Flex align="center" justifyContent={"space-evenly"}>
                                 <Text textTransform={"capitalize"} >
                                     Ações
@@ -193,21 +193,21 @@ export const TableFicha: React.FC<ITable> = (props) => {
                         <Td borderBottom={"1px solid"}>Repouso</Td>
                         <Td borderBottom={"1px solid"}>Própria</Td>
                         <Td borderBottom={"1px solid"}>
-                            
-                            <Flex align="center" justifyContent={"space-evenly"}>
+
+                            <Flex align="center" >
                                 <Text textTransform={"capitalize"} >
-                                J11
+                                    J11
                                 </Text>
                                 <Flex ml="auto">
                                     <Icon as={FiInfo} size={'20px'} />
                                 </Flex>
                             </Flex>
-                            </Td>
+                        </Td>
                         <Td borderBottom={"1px solid"}>CRM2334</Td>
                         <Td borderBottom={"1px solid"}>
-                        <Flex align="center" justifyContent={"space-evenly"}>
+                            <Flex align="center">
                                 <Text textTransform={"capitalize"} >
-                                01/01/2023
+                                    01/01/2023
                                 </Text>
                                 <Flex ml="auto">
                                     <Icon as={FiInfo} size={'20px'} />
@@ -257,9 +257,9 @@ export const TableFicha: React.FC<ITable> = (props) => {
                         <Td borderBottom={"1px solid"}>Repouso</Td>
                         <Td borderBottom={"1px solid"}>Própria</Td>
                         <Td borderBottom={"1px solid"}>
-                        <Flex align="center" justifyContent={"space-evenly"}>
+                            <Flex align="center">
                                 <Text textTransform={"capitalize"} >
-                                01/01/2023
+                                    F41
                                 </Text>
                                 <Flex ml="auto">
                                     <Icon as={FiInfo} size={'20px'} />
