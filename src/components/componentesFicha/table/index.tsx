@@ -13,6 +13,7 @@ import { BotaoPendente } from "../registrosMedicos/buttons/buttonPendente";
 import { BotaoAtual } from "../registrosMedicos/buttons/buttonAtual";
 import { BotaoCompletas } from "../registrosMedicos/buttons/buttonCompletas";
 import { IconeInfo } from "../registrosMedicos/icones/iconeInfo";
+import { FiInfo } from "react-icons/fi";
 
 interface ITable {
     isOpen: boolean;
@@ -23,7 +24,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
     return (
 
 
-        <TableContainer 
+        <TableContainer
             p={0}
             pt={4}
             w={props.isOpen ? "1150px" : "1300px"}
@@ -32,7 +33,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
         >
             <Table
                 variant="unstyled"
-                            >
+            >
                 <TableCaption textAlign={"left"} p={0}>
                     <Flex justify="space-between">
                         1-4 de 04 itens
@@ -65,14 +66,14 @@ export const TableFicha: React.FC<ITable> = (props) => {
                 </TableCaption>
 
                 <Thead>
-                    <Tr 
-                    borderTop="1px solid" 
-                    borderBottom="1px solid" 
-                    bg="rgba(252, 252, 253, 1)" 
-                    alignItems="left" 
-                    className="cell-table"
-                    fontSize={"12px"}>
-                        <Th  pl={1}>
+                    <Tr
+                        borderTop="1px solid"
+                        borderBottom="1px solid"
+                        bg="rgba(252, 252, 253, 1)"
+                        alignItems="left"
+                        className="cell-table"
+                        fontSize={"12px"}>
+                        <Th pl={1}>
                             <Flex align="center" justify={"flex-end"} gap={2}>
                                 <Text textTransform={"capitalize"} >
                                     Ordem
@@ -164,7 +165,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                             </Flex>
                         </Th>
                         <Th borderTop="1px solid" pl={1}>
-                            <Flex align="center" justify={"flex-end"} gap={2}>
+                            <Flex align="center" justify={"flex-end"}>
                                 <Text textTransform={"capitalize"} >
                                     Status
                                 </Text>
@@ -174,7 +175,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                             </Flex>
                         </Th>
                         <Th borderTop="1px solid" pl={1}>
-                            <Flex align="center" justifyContent={"space-evenly"} gap={2}>
+                            <Flex align="center" justifyContent={"space-evenly"}>
                                 <Text textTransform={"capitalize"} >
                                     Ações
                                 </Text>
@@ -188,18 +189,37 @@ export const TableFicha: React.FC<ITable> = (props) => {
 
                 <Tbody className="cell-table">
                     <Tr bg={"white"} >
-                        <Td borderBottom={"1px solid"}><Text>1</Text></Td>
-                        <Td borderBottom={"1px solid"}><Text>Repouso</Text></Td>
+                        <Td borderBottom={"1px solid"}>1</Td>
+                        <Td borderBottom={"1px solid"}>Repouso</Td>
                         <Td borderBottom={"1px solid"}>Própria</Td>
-                        <Td borderBottom={"1px solid"}>J11</Td>
+                        <Td borderBottom={"1px solid"}>
+                            
+                            <Flex align="center" justifyContent={"space-evenly"}>
+                                <Text textTransform={"capitalize"} >
+                                J11
+                                </Text>
+                                <Flex ml="auto">
+                                    <Icon as={FiInfo} size={'20px'} />
+                                </Flex>
+                            </Flex>
+                            </Td>
                         <Td borderBottom={"1px solid"}>CRM2334</Td>
-                        <Td borderBottom={"1px solid"}>01/01/2023</Td>
+                        <Td borderBottom={"1px solid"}>
+                        <Flex align="center" justifyContent={"space-evenly"}>
+                                <Text textTransform={"capitalize"} >
+                                01/01/2023
+                                </Text>
+                                <Flex ml="auto">
+                                    <Icon as={FiInfo} size={'20px'} />
+                                </Flex>
+                            </Flex>
+                        </Td>
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>3</Td>
-                        <Td borderBottom={"1px solid"}><BotaoPendente/></Td>
-                        <Td borderBottom={"1px solid"}><BotaoAtual/></Td>
+                        <Td borderBottom={"1px solid"}><BotaoPendente /></Td>
+                        <Td borderBottom={"1px solid"}><BotaoAtual /></Td>
                         <Td borderBottom={"1px solid"} >
-                            <HStack><IconeBusca/> <IconeRelatorio/><IconeEditar/><IconeDeletar/></HStack>
+                            <HStack><IconeBusca /> <IconeRelatorio /><IconeEditar /><IconeDeletar /></HStack>
                         </Td>
                     </Tr>
                     <Tr bg={"white"} >
@@ -211,10 +231,10 @@ export const TableFicha: React.FC<ITable> = (props) => {
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>3</Td>
-                        <Td borderBottom={"1px solid"}><BotaoCompletas/></Td>
-                        <Td borderBottom={"1px solid"}><BotaoAtual/></Td>
+                        <Td borderBottom={"1px solid"}><BotaoCompletas /></Td>
+                        <Td borderBottom={"1px solid"}><BotaoAtual /></Td>
                         <Td borderBottom={"1px solid"} >
-                            <HStack><IconeBusca/> <IconeRelatorio/><IconeEditar/><IconeDeletar/></HStack>
+                            <HStack><IconeBusca /> <IconeRelatorio /><IconeEditar /><IconeDeletar /></HStack>
                         </Td>
                     </Tr>
                     <Tr bg={"white"} >
@@ -226,25 +246,34 @@ export const TableFicha: React.FC<ITable> = (props) => {
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>3</Td>
-                        <Td borderBottom={"1px solid"}><BotaoCompletas/></Td>
-                        <Td borderBottom={"1px solid"}><BotaoAtual/></Td>
+                        <Td borderBottom={"1px solid"}><BotaoCompletas /></Td>
+                        <Td borderBottom={"1px solid"}><BotaoAtual /></Td>
                         <Td borderBottom={"1px solid"} >
-                            <HStack><IconeBusca/> <IconeRelatorio/><IconeEditar/><IconeDeletar/></HStack>
+                            <HStack><IconeBusca /> <IconeRelatorio /><IconeEditar /><IconeDeletar /></HStack>
                         </Td>
                     </Tr>
                     <Tr bg={"white"} >
                         <Td borderBottom={"1px solid"}>1</Td>
                         <Td borderBottom={"1px solid"}>Repouso</Td>
                         <Td borderBottom={"1px solid"}>Própria</Td>
-                        <Td borderBottom={"1px solid"}>J11</Td>
-                        <Td borderBottom={"1px solid"}>CRM2356<IconeInfo/></Td>
+                        <Td borderBottom={"1px solid"}>
+                        <Flex align="center" justifyContent={"space-evenly"}>
+                                <Text textTransform={"capitalize"} >
+                                01/01/2023
+                                </Text>
+                                <Flex ml="auto">
+                                    <Icon as={FiInfo} size={'20px'} />
+                                </Flex>
+                            </Flex>
+                        </Td>
+                        <Td borderBottom={"1px solid"}>CRM2356</Td>
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>01/01/2023</Td>
                         <Td borderBottom={"1px solid"}>3</Td>
-                        <Td borderBottom={"1px solid"}><BotaoCompletas/></Td>
-                        <Td borderBottom={"1px solid"}><BotaoAtual/></Td>
+                        <Td borderBottom={"1px solid"}><BotaoCompletas /></Td>
+                        <Td borderBottom={"1px solid"}><BotaoAtual /></Td>
                         <Td borderBottom={"1px solid"} >
-                            <HStack><IconeBusca/> <IconeRelatorio/><IconeEditar/><IconeDeletar/></HStack>
+                            <HStack><IconeBusca /> <IconeRelatorio /><IconeEditar /><IconeDeletar /></HStack>
                         </Td>
                     </Tr>
                 </Tbody>
