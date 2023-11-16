@@ -7,7 +7,7 @@ export const IconeBusca = () => {
 
     return (
         <>
-        <IoSearchOutline color="#A0AEC0" size={'13px'} />
+        <IoSearchOutline color="#A0AEC0" size={'20px'} />
         </>
     )
 };

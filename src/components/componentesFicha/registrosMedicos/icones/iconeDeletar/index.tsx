@@ -7,7 +7,7 @@ export const IconeDeletar = () => {
 
     return (
         <>
-        <BiTrash color="#A0AEC0" size={'13px'} />
+        <BiTrash color="#A0AEC0" size={'20px'} />
         </>
     )
 };

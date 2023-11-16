@@ -1,8 +1,6 @@
 import React from 'react';
 import { Accordion, AccordionItem, AccordionButton, Flex, AccordionIcon, AccordionPanel, Center, Icon } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
-import { RiPencilFill } from "react-icons/ri";
-import { IconeCadastro } from "../../componentesGerais/iconesMenuLateral/iconeMenulateralCadastro"
 
 interface IAccordionMenu {
     namePrimary: string,
@@ -36,7 +34,8 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
                             {props.customIcon} {/* Utilize o ícone personalizado passado como prop */}
                             <Text
                                 pl={6}
-                            >{props.namePrimary}</Text>
+                            >{props.namePrimary}
+                            </Text>
                         </Flex>
                         <AccordionIcon />
                     </AccordionButton>

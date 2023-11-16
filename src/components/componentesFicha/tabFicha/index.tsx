@@ -10,6 +10,7 @@ export const TabFicha = () => {
             //colorScheme="rgba(39, 103, 73, 1)"
             //fontWeight={500}
             fontSize={'18px'}
+            color={'rgba(0, 0, 0, 0.48)'}
             >
             <TabList w={'fit-content'} >
                 <Tab >Todos</Tab>

@@ -21,3 +21,4 @@ export * from '../components/componentesFicha/registrosMedicos/icones/iconeDelet
 export * from '../components/componentesFicha/registrosMedicos/icones/iconeEditar';
 export * from '../components/componentesFicha/registrosMedicos/icones/iconeRelatorio';
 export * from '../components/componentesFicha/dadosDaFicha/dados';
+export * from '../components/componentesFicha/registrosMedicos/buttons/buttonAlert';

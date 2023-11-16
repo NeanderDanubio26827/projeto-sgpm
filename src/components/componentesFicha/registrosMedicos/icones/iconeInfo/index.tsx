@@ -5,7 +5,7 @@ import { FiInfo } from "react-icons/fi";
 export const IconeInfo = () => {
     return (
         <>
-            <FiInfo color="#A0AEC0" size={'13px'} />
+            <FiInfo color="#A0AEC0" size={'20px'} />
         </>
     )
 };
