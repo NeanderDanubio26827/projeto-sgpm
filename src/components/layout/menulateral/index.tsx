@@ -25,7 +25,7 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                 minW={'60px'}
                 //w={{base: props.isOpen ? "12vw" : "3vw" , sm: props.isOpen ? "6vw" : ""}}                
                 transitionDuration="1.0s"
-                height={"100%"}
+                height={"full"}
                 //border={"1px solid red"}
                 bg={"#276749"}
                 borderRadius={"15px"}
@@ -49,7 +49,6 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                 <Flex
                     flexDirection="column"
                     position="relative"
-
                 >
                     <Flex pt={6} pb={0}
                         className="gradient-border"
