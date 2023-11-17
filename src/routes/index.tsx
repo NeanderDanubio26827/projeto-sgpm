@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HomePrincipal } from "../pages/views/cadastro";
+import { HomePrincipal } from "../pages/views/home";
 import React from "react";
 import { useDisclosure } from "@chakra-ui/react";
 import { Ficha } from "../pages/views/ficha";
@@ -11,6 +11,7 @@ export const Rotas = () => {
             <Routes>
                 <Route path="/" element={<HomePrincipal onClose={onClose} onOpen={onOpen} />} />
                 <Route path="/ficha" element={<Ficha onClose={onClose} onOpen={onOpen} />} />
+                <Route path="/novoRegistro" element={<Ficha onClose={onClose} onOpen={onOpen} />} />
             </Routes>
         </Router>
     );

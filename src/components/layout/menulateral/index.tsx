@@ -3,7 +3,7 @@ import Brasao from '../../../assets/img/BRASAOPMCEbranco2.png';
 import Relogio from "../../componentesGerais/relogio";
 import { IconeMinhaArea } from "../../componentesGerais/iconesMenuLateral/iconeMinhaArea";
 import { AccordionMenuLateral } from "../../componentesGerais/accordionMenuLateral";
-import {IconeSistema} from "../../componentesGerais/iconesMenuLateral/iconeSistema";
+import { IconeSistema } from "../../componentesGerais/iconesMenuLateral/iconeSistema";
 import { IconeCadastro } from "../../componentesGerais/iconesMenuLateral/iconeMenulateralCadastro";
 import '../../border.modules.css';
 import React from "react";
@@ -18,19 +18,17 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
     return (
         <>
             <Flex
+                //display={{ base: 'none', md: 'block' }}
                 flexDirection={"column"}
                 //width={"240px"}
-                w={props.isOpen ? "240px" : "60px"}
+                w={{base:props.isOpen ? "240px" : "60px"}}
                 transitionDuration="1.0s"
                 height={"873px"}
                 //border={"1px solid red"}
                 bg={"#276749"}
                 borderRadius={"15px"}
-                
-            //fontFamily={'fonts'}
-
+                //fontFamily={'fonts'}
             >
-
                 <Flex
                     //flex para a imagem
                     pb={4}
@@ -41,10 +39,7 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                         position={"relative"}
                         top={"5px"}
                         left={"38px"}
-
-                    >
-
-                    </Image>
+                    />
                 </Flex>
 
                 <Flex
@@ -77,7 +72,6 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                             textAlign={"center"}
                             display={!props.isOpen ? "visibility" : "none"}
 
-
                         >
                             SGPM
                         </Text>
@@ -92,7 +86,7 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
 
                     >
                         <Flex
-                            
+
                             p={6}
                             pl={4}
                             _hover={{
@@ -108,7 +102,7 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                             <IconeSistema />
                             <Text pl={5} display={props.isOpen ? "visibility" : "none"}>Sistemas</Text>
                         </Flex>
-                        
+
                         <Flex
                             p={6}
                             pl={4}

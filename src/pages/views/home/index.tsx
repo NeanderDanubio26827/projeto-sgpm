@@ -10,7 +10,7 @@ interface IHomePrincipal {
     onClose: () => void;
 }
 export const HomePrincipal: React.FC<IHomePrincipal> = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
@@ -20,7 +20,7 @@ export const HomePrincipal: React.FC<IHomePrincipal> = () => {
         <>
             <Flex
                 bg="rgba(248, 249, 250, 1)"
-                w={'100%'}
+                //w={'100%'}
                 //h={'917px'}
             >
                 <Grid

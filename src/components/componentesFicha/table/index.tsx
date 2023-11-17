@@ -3,15 +3,11 @@ import {
     Flex, Text, Button, Select, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr, IconButton, Img, HStack
 } from "@chakra-ui/react";
 import { AiOutlineArrowDown } from 'react-icons/ai';
-import { Icon } from '@chakra-ui/react'
 import './table.modules.css'
 import { IconeDeletar } from "../registrosMedicos/icones/iconeDeletar";
 import { IconeRelatorio } from "../registrosMedicos/icones/iconeRelatorio";
 import { IconeEditar } from "../registrosMedicos/icones/iconeEditar";
 import { IconeBusca } from "../registrosMedicos/icones/iconeBusca";
-import { BotaoPendente } from "../registrosMedicos/buttons/buttonPendente";
-import { BotaoAtual } from "../registrosMedicos/buttons/buttonAtual";
-import { BotaoCompletas } from "../registrosMedicos/buttons/buttonCompletas";
 import { IconeInfo } from "../registrosMedicos/icones/iconeInfo";
 import { ThTable } from "./th";
 import { TdTable } from "./td";
@@ -28,6 +24,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
             pt={4}
             w={props.isOpen ? "1150px" : "1300px"}
             transitionDuration="1.0s"
+            border={'1px solid rgba(234, 236, 240, 1'}
             
         >
             <Table
@@ -45,10 +42,11 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 fontWeight={"none"}
                                 bg={"none"}
                                 border={"1px solid"}
-                                borderColor={"gray.400"}
+                                borderColor={"rgba(208, 213, 221, 1)"}                                
+                                borderRadius={'8px'}
                                 color={'rgba(52, 64, 84, 1)'}
                             >
-                                Anterior
+                                anterior
                             </Button>
                             <Button
                                 ml={2}
@@ -57,10 +55,12 @@ export const TableFicha: React.FC<ITable> = (props) => {
                                 fontWeight={"none"}
                                 bg={"none"}
                                 border={"1px solid"}
-                                borderColor={"gray.400"}
+                                borderColor={"rgba(208, 213, 221, 1)"}
+                                color={'rgba(52, 64, 84, 1)'}
+                                borderRadius={'8px'}
                                 
                             >
-                                Próximo
+                                próximo
                             </Button>
                         </Flex>
                     </Flex>
@@ -70,6 +70,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
                     <Tr
                         borderTop="1px solid rgba(234, 236, 240, 1)"
                         borderBottom="1px solid rgba(234, 236, 240, 1)"
+                        
                         bg="rgba(252, 252, 253, 1)"
                         >
                         <ThTable title="Ordem" customIcon={<AiOutlineArrowDown/>} />

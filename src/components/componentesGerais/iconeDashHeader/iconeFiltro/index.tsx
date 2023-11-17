@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import React from 'react';
 import { FiFilter } from 'react-icons/fi';
 
-export const IconeFiltro = () => {
+export const IconeFiltro = (props) => {
     return (
         <Flex>
 
