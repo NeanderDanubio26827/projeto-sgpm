@@ -7,7 +7,8 @@ export const IconeSistema = () => {
 
     return (
         <Icon as={BiSolidDashboard}
-            boxSize={"1.3vw"}
+            //boxSize={"1.3vw"}
+            boxSize={'24px'}
             position={"relative"}
             top={"3px"}
             left={"3px"}

@@ -12,6 +12,7 @@ export const FlexMenor = () => {
                 //border={"1px solid red"}
                 borderRadius={"8px"}
                 width="14vw"
+                minW={'275px'}
                 height="28.97px"
                 top="134px"
                 left="307px"
@@ -27,7 +28,7 @@ export const FlexMenor = () => {
                             <Text
                                 fontWeight={800}
                                 color={"rgba(0, 0, 0, 0.48)"}
-                                fontSize={'0.6vw'}
+                                fontSize={'12px'}
                                 pl={2}
                                 
                             >
@@ -40,7 +41,7 @@ export const FlexMenor = () => {
                             <Text
                                 fontWeight={800}
                                 color={"rgba(0, 0, 0, 0.48)"}
-                                fontSize={'0.6vw'}
+                                fontSize={'12px'}
                                 
                             >
                                 NOVO DOCUMENTO MÉDICO

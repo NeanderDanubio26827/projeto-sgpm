@@ -1,6 +1,6 @@
 import { Image } from "@chakra-ui/react";
 import React from "react";
-import perfil from '../../../../assets/img/CAP-Rodrigues-Coordenador-COTIC 1.png'; 
+import perfil from '../../../../assets/img/militar.jpg'; 
 
 export const ImgFicha = (props) => {
     return (

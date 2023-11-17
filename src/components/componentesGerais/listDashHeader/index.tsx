@@ -13,13 +13,15 @@ export const ListDashHeader: React.FC<IListDashHeader> = ({...props}) => {
             <Flex
                 pl={4}
                 ml={4}                              
-                {...props}                
+                {...props}
+                minW={"18px"}
+                minH={"15px"}                
                 >
                 <List
                     weight="bold"
                     color="#A0AEC0"
                     size={'24px'}
-                    onClick={props.handleToggle}                  
+                    onClick={props.handleToggle}                                    
                     
                 />
             </Flex>

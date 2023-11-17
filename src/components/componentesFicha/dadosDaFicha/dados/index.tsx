@@ -19,19 +19,19 @@ export const DadosFicha = (props) => {
         >
           <Flex>
             <Text fontWeight={700}>Posto/Grad: </Text>
-            <Text>Major QOPM</Text>
+            <Text>Cel QOPM</Text>
           </Flex>
           <Flex >
             <Text fontWeight={700}>Nome:</Text>
-            <Text>Francisco Atailo Rodrigues de Oliveira</Text>
+            <Text>Viviane Caxias</Text>
           </Flex>
           <Flex>
             <Text fontWeight={700}>Matrícula:</Text>
-            <Text>151.842-1-3</Text>
+            <Text>999.99-9-9</Text>
           </Flex>
           <Flex>
             <Text fontWeight={700}>OPM:</Text>
-            <Text>CETIC</Text>
+            <Text>SELVA</Text>
           </Flex>
         </VStack>
 

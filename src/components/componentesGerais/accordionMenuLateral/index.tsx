@@ -35,7 +35,7 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
                             {props.customIcon} {/* Utilize o ícone personalizado passado como prop */}
                             <Text
                                 pl={6}
-                                w={"6vw"}
+                                fontSize={'0.9vw'}
                                 display={props.displayCustom}
                             >{props.namePrimary}
                             </Text>

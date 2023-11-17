@@ -4,6 +4,11 @@ import { BiPencil } from "react-icons/bi";
 
 export const IconeCadastro = () => {
     return (
-        <Icon as={BiPencil} boxSize={"1.3vw"}></Icon>
+        <Icon as={BiPencil} 
+        //boxSize={"1.3vw"}
+        boxSize={'24px'}
+        >
+
+        </Icon>
     ); 
 }
