@@ -19,8 +19,8 @@ export const HomePrincipal: React.FC<IHomePrincipal> = () => {
     return (
         <>
             <Flex
-                //bg="rgba(248, 249, 250, 1)"
-                bg={'green.100'}
+                bg="rgba(248, 249, 250, 1)"
+                //bg={'green.100'}
                 w={'100vw'}
                 h={'100vh'}
             >
