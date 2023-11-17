@@ -8,7 +8,7 @@ export const FooterCetic = () => {
         <>
 
             <footer>
-                <Image src={imgCETIC} w={"80px"} h={"25px"}/>
+                <Image src={imgCETIC} w={'4vw'} h={"3vh"}/>
             </footer>
         </>)
 };

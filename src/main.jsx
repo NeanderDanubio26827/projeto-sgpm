@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { ChakraProvider, extendTheme, CSSReset } from '@chakra-ui/react'
 
-const breakpoints = {
+/* const breakpoints = {
   base: "0px",
   sm: "320px",
   md: "768px",
@@ -11,7 +11,7 @@ const breakpoints = {
   xl: "1200px",
   "2xl": "1536px",
 };
-
+ */
 // Adicione a fonte "Roboto" ao tema estendido
 const theme = extendTheme({
   fonts: {
@@ -30,7 +30,9 @@ const theme = extendTheme({
     },
   },
 }, 
-{ breakpoints }
+{ 
+  //breakpoints 
+}
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(

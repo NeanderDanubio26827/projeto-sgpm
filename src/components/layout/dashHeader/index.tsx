@@ -18,7 +18,8 @@ export const DashHeader: React.FC<IDashHeader> = (props) => {
             textAlign="center"
             justify="center"
             flexDirection="row"
-            w={props.isOpen ? `${"1200px"}` : `${"1400px"}`}
+            //w={props.isOpen ? "1200px" : "1400px"}
+            w={props.isOpen ? "83vw" : "93vw"}
             transitionDuration="1.0s"
             height={"80px"}
             borderRadius={"8px"}
@@ -26,7 +27,7 @@ export const DashHeader: React.FC<IDashHeader> = (props) => {
             boxShadow="0px 4px 4px -2px rgba(0, 0, 0, 0.5)"
             bg={"white"}
         >
-            <HStack justifyContent="space-between" w="100%" border={"1px solid green"}>
+            <HStack justifyContent="space-between" w="100%">
                 <ListDashHeader handleToggle={props.handleToggle} width={'5%'} />
 
                 <Flex

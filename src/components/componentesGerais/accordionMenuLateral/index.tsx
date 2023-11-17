@@ -5,6 +5,7 @@ import { Text } from "@chakra-ui/react";
 interface IAccordionMenu {
     namePrimary: string,
     nameSecondary: string,
+    displayCustom: string,
     customIcon: React.ReactNode; // Nova propriedade para o ícone personalizado
 }
 
@@ -24,7 +25,7 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
             //ml={4}
             pt={2}
         >
-            <AccordionItem border="none">
+            <AccordionItem border="none" >
                 <h2>
                     <AccordionButton _hover={{ focus: "none" }}
                         //pl={-2}
@@ -34,10 +35,12 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
                             {props.customIcon} {/* Utilize o ícone personalizado passado como prop */}
                             <Text
                                 pl={6}
+                                w={"6vw"}
+                                display={props.displayCustom}
                             >{props.namePrimary}
                             </Text>
                         </Flex>
-                        <AccordionIcon />
+                        <AccordionIcon display={props.displayCustom} />
                     </AccordionButton>
                 </h2>
                 <AccordionPanel bg="rgb(226, 232, 240)" width="100%" height={"100%"} marginBottom={0}>

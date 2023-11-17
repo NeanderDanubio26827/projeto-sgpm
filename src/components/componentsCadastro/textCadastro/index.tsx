@@ -7,7 +7,7 @@ export const TextCadastro = () => {
         <>
         <Text 
         color={"rgba(0, 0, 0, 0.48)"} 
-        fontSize={'16px'}
+        fontSize={'0.9vw'}
         pl={4}
         >
             Policial/ Servidor Civil/ Tercerizado

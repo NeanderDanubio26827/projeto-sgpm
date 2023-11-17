@@ -26,7 +26,7 @@ export const FlexFicha: React.FC<IFlexFicha> = (props) => {
                 borderRadius={"8px"}
                 borderTopLeftRadius={0}
                 //border={"1px solid red"}
-                w={props.isOpen ? "1200px" : "1400px"}
+                w={props.isOpen ? "83vw" : "93vw"}
                 transitionDuration="1.0s"
                 minHeight="645px"
                 height={'1000px'}
@@ -54,7 +54,7 @@ export const FlexFicha: React.FC<IFlexFicha> = (props) => {
                     bg={'white'}
                     p={4}
                     mt={4}
-                    w={props.isOpen ? "1170px" : "1340px"}
+                    w={props.isOpen ? "81vw" : "91vw"}
                     transitionDuration="1.0s"
                     height={'275px'}
                     align={'center'}
@@ -85,7 +85,7 @@ export const FlexFicha: React.FC<IFlexFicha> = (props) => {
                     bg={'white'}
                     p={4}
                     mt={4}
-                    w={props.isOpen ? "1170px" : "1340px"}
+                    w={props.isOpen ? "81vw" : "91vw"}
                     transitionDuration="1.0s"
                 >
                     {/* Seu conteúdo aqui */}

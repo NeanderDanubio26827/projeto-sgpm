@@ -20,8 +20,8 @@ export const Ficha: React.FC<IFicha> = () => {
         <>
             <Flex
                 bg="rgba(248, 249, 250, 1)"
-                w={'100%'}
-                h={'917px'}
+                w={'100vw'}
+                h={'100vh'}
             >
                 <Grid
                     templateAreas={`"nav header"
@@ -29,9 +29,10 @@ export const Ficha: React.FC<IFicha> = () => {
                                     "nav footer"`}
                     gridTemplateRows={'50px 1fr 30px'}
                     //gridTemplateColumns={'240px 1fr'}  // O primeiro valor foi ajustado para a largura do MenuLateral
-                    gridTemplateColumns={`1fr ${isOpen ? "1200px" : `${'100%'}`} `} // Use a expressão aqui
+                    gridTemplateColumns={`1fr ${isOpen ? "63vw" : `${'73vw'}`} `} // Use a expressão aqui
 
                     h='100vh'
+                    
                     gap='8'
                     mt={"25px"}
                     ml={"25px"}

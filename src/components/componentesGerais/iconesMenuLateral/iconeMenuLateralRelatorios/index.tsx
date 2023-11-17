@@ -5,6 +5,6 @@ import { IoDocumentsSharp } from 'react-icons/io5';
 
 export const IconeRelatorio = () => {
     return (
-        <Icon as={IoDocumentsSharp} boxSize={"24px"}></Icon>
+        <Icon as={IoDocumentsSharp} boxSize={"1.3vw"}></Icon>
     ); 
 }

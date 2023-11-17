@@ -7,7 +7,7 @@ export const TitleCadastro = () => {
     <Text 
     color={"rgba(0, 0, 0, 0.48)"} 
     fontWeight={'700'} 
-    fontSize={'25px'}
+    fontSize={'1.2vw'}
     textDecoration={'underline'}
     >
         Novo Registro de saúde

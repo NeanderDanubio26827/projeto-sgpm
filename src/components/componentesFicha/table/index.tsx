@@ -22,7 +22,7 @@ export const TableFicha: React.FC<ITable> = (props) => {
         <TableContainer
             p={0}
             pt={4}
-            w={props.isOpen ? "1150px" : "1300px"}
+            w={props.isOpen ? "79vw" : "90vw"}
             transitionDuration="1.0s"
             border={'1px solid rgba(234, 236, 240, 1'}
             

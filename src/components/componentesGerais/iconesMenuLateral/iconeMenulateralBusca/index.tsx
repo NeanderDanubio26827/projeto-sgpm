@@ -4,6 +4,6 @@ import { IoSearchSharp } from 'react-icons/io5';
 
 export const IconeBusca = () => {
     return (
-        <Icon as={IoSearchSharp} boxSize={"24px"} />
+        <Icon as={IoSearchSharp} boxSize={"1.3vw"} />
     );
 }

@@ -21,7 +21,7 @@ export const FlexConteudo: React.FC<IFlexCadastrar> = (props) => {
                 borderRadius={"8px"}
                 borderTopLeftRadius={0}
                 //border={"1px solid red"}
-                w={props.isOpen ? "1200px" : "1400px"}
+                w={props.isOpen ? "83vw" : "93vw"}
                 transitionDuration="1.0s"
                 //width="1200px"
                 minHeight="645px"

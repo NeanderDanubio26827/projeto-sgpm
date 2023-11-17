@@ -19,25 +19,21 @@ export const HomePrincipal: React.FC<IHomePrincipal> = () => {
     return (
         <>
             <Flex
-                bg="rgba(248, 249, 250, 1)"
-                //w={'100%'}
-                //h={'917px'}
+                //bg="rgba(248, 249, 250, 1)"
+                bg={'green.100'}
+                w={'100vw'}
+                h={'100vh'}
             >
+                
                 <Grid
                     templateAreas={`"nav header"
                                     "nav main"
                                     "nav footer"`}
                     //gridTemplateRows={'50px fit-content 30px'}
-                    //gridTemplateColumns={'240px 1fr'}  // O primeiro valor foi ajustado para a largura do MenuLateral
-                    //gridTemplateRows={'50px min-content 30px'}
-                    gridTemplateColumns={`1fr ${isOpen ? "1200px" : `${'100%'}`} `} // Use a expressão aqui
-
-                    //minHeight="645px"
-                    //height={'fit-content'}
+                    //gridTemplateColumns={`1fr ${isOpen ? "63vw" : `${'73vw'}`} `} // Use a expressão aqui
                     gap='8'
                     mt={"25px"}
-                    ml={"25px"}
-
+                    ml={"25px"}                    
                 >
                     <GridItem area={'header'}>
                         <DashHeader isOpen={isOpen} handleToggle={handleToggle} />
@@ -47,8 +43,6 @@ export const HomePrincipal: React.FC<IHomePrincipal> = () => {
                     </GridItem>
                     <GridItem
                         mt={8} area={'main'}
-                    //shadow={'lg'}
-                    //border={"1px solid yellow"}
                     >
                         <FlexConteudo isOpen={isOpen} />
                     </GridItem>

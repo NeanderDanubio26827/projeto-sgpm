@@ -9,7 +9,7 @@ export const InputCadastrar = () => {
         <VStack>
             
             <InputGroup>                
-                <Input type='search' placeholder='Digite CPF, matrícula ou nome' w={"349px"} />
+                <Input type='search' placeholder='Digite CPF, matrícula ou nome' w={'17vw'} />
                 <InputLeftElement pointerEvents='none'>
                     <BsPersonFill color='#A0AEC0' />
                 </InputLeftElement>
