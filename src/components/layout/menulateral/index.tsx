@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem, Icon, Image, Text } from "@chakra-ui/react"
+import { Flex, Grid, GridItem, Icon, Image, Text, useBreakpoint } from "@chakra-ui/react"
 import Brasao from '../../../assets/img/BRASAOPMCEbranco2.png';
 import Relogio from "../../componentesGerais/relogio";
 import { IconeMinhaArea } from "../../componentesGerais/iconesMenuLateral/iconeMinhaArea";
@@ -6,60 +6,81 @@ import { AccordionMenuLateral } from "../../componentesGerais/accordionMenuLater
 import { IconeSistema } from "../../componentesGerais/iconesMenuLateral/iconeSistema";
 import { IconeCadastro } from "../../componentesGerais/iconesMenuLateral/iconeMenulateralCadastro";
 import '../../border.modules.css';
-import React from "react";
+import React, { useState } from "react";
 import { IconeBusca } from "../../componentesGerais/iconesMenuLateral/iconeMenulateralBusca";
 import { IconeRelatorio } from "../../componentesGerais/iconesMenuLateral/iconeMenuLateralRelatorios";
 
 interface IMenuLateral {
     isOpen: boolean;
+    handleToggle: () => void;
 }
 
 export const MenuLateral: React.FC<IMenuLateral> = (props) => {
+
     return (
         <>
             <Flex
-
                 flexDirection={"column"}
-                //w={props.isOpen ? "240px" : "60px"}
-                w={props.isOpen ? "12vw" : "3vw"}
-                minW={'60px'}
-                //w={{base: props.isOpen ? "12vw" : "3vw" , sm: props.isOpen ? "6vw" : ""}}                
+                w={{
+                    base: props.isOpen ? "240px" : "0px",
+                    lg: props.isOpen ? "240px" : "60px",
+                    md: props.isOpen ? "240px" : "60px",
+                    sm: props.isOpen ? "240px" : "0px",
+                }}
+                //w={props.isOpen ? "12vw" : "3vw"}
+                //minW={'200px'}
                 transitionDuration="1.0s"
                 height={"full"}
                 //border={"1px solid red"}
                 bg={"#276749"}
                 borderRadius={"15px"}
+                display={{
+                    //base: props.isOpen ? 'block' : 'none',
+                    lg: "block",
+                    md: "block",
+                    sm: 'block',
+                }}
+
 
             >
                 <Flex
                     //flex para a imagem
                     pb={4}
                     className="gradient-border"
-                    display={props.isOpen ? "visibility" : "none"}
+                    display={props.isOpen ? "flex" : "none"}
+                    align={'center'}
+                    justify={'center'}
 
                 >
                     <Image src={Brasao}
-                        position={"relative"}
-                        top={"5px"}
-                        left={"38px"}
-                        w={'8vw'}
+                        pt={4}
+                        //w={'8vw'}
+                        w={'164px'}
+                        display={{ base: "none", lg: 'flex', md: "flex", sm: 'block' }}
                     />
                 </Flex>
 
                 <Flex
                     flexDirection="column"
-                    position="relative"
+                //position="relative"
+
                 >
                     <Flex pt={6} pb={0}
                         className="gradient-border"
+                        align={'center'}
+                        justify={'center'}
                     >
                         <Text
                             color={"white"}
-                            width={'60vw'}
-                            height={"8vh"}
-                            fontSize={'0.9vw'}
+                            //width={'60vw'}
+                            //height={"8vh"}
+                            width={'224px'}
+                            height={'88px'}
+                            //fontSize={'0.9vw'}
+                            fontSize={'20px'}
                             textAlign={"center"}
-                            display={props.isOpen ? "visibility" : "none"}
+                            //display={props.isOpen ? "visibility" : "none"}
+                            display={props.isOpen ? { base: "none", lg: 'block', md: "block", sm: 'block' } : "none"}
                         >
                             SISTEMA DE GESTÃO
                             <br />
@@ -67,11 +88,15 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                         </Text>
                         <Text
                             color={"white"}
-                            width={'60vw'}
-                            height={"8vh"}
+                            /* width={'60vw'}
+                            height={"8vh"} */
+                            width={'224px'}
+                            height={'88px'}
+                            //fontSize={'0.9vw'}
+                            fontSize={'20px'}
                             //fontWeight={800}
-                            textAlign={"center"}
                             display={!props.isOpen ? "visibility" : "none"}
+                            textAlign={"center"}
 
                         >
                             SGPM
@@ -80,9 +105,8 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                     <Flex
                         color={"white"}
                         gap="8px"
-                        display={"-ms-inline-flexbox"}
                         className="gradient-border"
-
+                        display={"-ms-inline-flexbox"}
                     >
                         <Flex
                             p={6}
@@ -95,12 +119,16 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                                 cursor: "pointer",
                                 transition: ".9s",
                             }}
+                            align="center"
+                            justify="left"
                         >
                             <IconeSistema />
                             <Text
-                                pl={5}
-                                display={props.isOpen ? "visibility" : "none"}
-                                fontSize={'0.9vw'}
+                                pl={10}
+                                display={props.isOpen ? "block" : "none"}
+                                //display={props.isOpen ? { base: "none", lg: 'block', md: "none", sm: 'none' } : "none"}
+                                //fontSize={'0.9vw'}
+                                fontSize={'14px'}
                             >Sistemas
                             </Text>
                         </Flex>
@@ -108,20 +136,28 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                         <Flex
                             p={6}
                             pl={4}
-                            width={"25vh"}
+
                             _hover={{
+                                base:{
                                 transform: "scale(1.0)",
                                 bgColor: "white",
                                 textColor: "black",
                                 cursor: "pointer",
                                 transition: ".9s",
-                            }}
+                            }
+                        }
+                        }
+
+                            align={'center'}
+                            justify={'left'}
                         >
                             <IconeMinhaArea />
                             <Text
-                                pl={5}
-                                display={props.isOpen ? "visibility" : "none"}
-                                fontSize={'0.9vw'}
+                                pl={10}
+                                display={props.isOpen ? "block" : "none"}
+                                //display={props.isOpen ? { base: "none", lg: 'block', md: "none", sm: 'none' } : "none"}
+                                //fontSize={'0.9vw'}
+                                fontSize={'14px'}
                             >Minha área
                             </Text>
                         </Flex>
@@ -138,10 +174,15 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                     <Text
                         fontWeight={800}
                         whiteSpace="nowrap"  // Adicionado para evitar quebras de linha
-                        width={'60vw'}
+                        /* width={'60vw'}
                         height={"8vh"}
-                        fontSize={'0.8vw'}
+                        fontSize={'0.8vw'} */
+                        width={'186px'}
+                        height={'28px'}
+                        fontSize={'16px'}
+
                         display={props.isOpen ? "visibility" : "none"}
+                    //display={props.isOpen ? { base: "none", lg: 'block', md: "none", sm: 'none' } : "none"}
                     >
                         RECURSOS HUMANOS
                     </Text>
@@ -151,6 +192,7 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                         width={'60vw'}
                         height={"8vh"}
                         display={!props.isOpen ? "visibility" : "none"}
+                    //display={!props.isOpen ? { base: "none", lg: 'block', md: "none", sm: 'none' } : "none"}
                     >
                         RH
                     </Text>
@@ -163,26 +205,40 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                     //width={"25vh"}
                     height={"168px"}
                     align="center"
-
                 >
 
                     <AccordionMenuLateral
-                        displayCustom={props.isOpen ? "visibility" : "none"}
+                        displayCustom={{
+                            lg: props.isOpen ? 'block' : 'none',
+                            md: props.isOpen ? "block" : 'none',
+                            sm: props.isOpen ? 'block' : 'none',
+                        }}
                         namePrimary="Cadastro"
                         nameSecondary="Cadastrar"
                         customIcon={<Icon as={IconeCadastro} boxSize={5} />}
+                        handleToggle={!props.isOpen ? props.handleToggle : undefined}
                     />
                     <AccordionMenuLateral
-                        displayCustom={props.isOpen ? "visibility" : "none"}
+                        displayCustom={{
+                            lg: props.isOpen ? 'block' : 'none',
+                            md: props.isOpen ? "block" : 'none',
+                            sm: props.isOpen ? 'block' : 'none',
+                        }}
                         namePrimary="Consulta"
                         nameSecondary="Lista de Atestados"
                         customIcon={<Icon as={IconeBusca} boxSize={5} />}
+                        handleToggle={!props.isOpen ? props.handleToggle : undefined}
                     />
                     <AccordionMenuLateral
-                        displayCustom={props.isOpen ? "visibility" : "none"}
+                        displayCustom={{
+                            lg: props.isOpen ? 'block' : 'none',
+                            md: props.isOpen ? "block" : 'none',
+                            sm: props.isOpen ? 'block' : 'none',
+                        }}
                         namePrimary="Relatórios"
                         nameSecondary="Relatório"
                         customIcon={<Icon as={IconeRelatorio} boxSize={5} />}
+                        handleToggle={!props.isOpen ? props.handleToggle : undefined}
                     />
 
                 </Flex>

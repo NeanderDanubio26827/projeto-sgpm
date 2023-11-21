@@ -10,8 +10,6 @@ export const HeaderRegistrosMedicos = () => {
 
     return (
         <>
-
-
             <HStack spacing={4} position={'absolute'} left={8}>
                 <ButtonFilter />
                 <ButtonSelecionar />

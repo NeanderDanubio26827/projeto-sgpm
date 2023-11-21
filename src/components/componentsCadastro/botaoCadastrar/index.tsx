@@ -6,11 +6,14 @@ export const BotaoCadastrar = () => {
     return (
         <Button
             color={"white"}
-            rightIcon={<BiPencil size={"0.7vw"} />}
+            rightIcon={
+            <BiPencil size={'16px'} 
+            />}
             bg=' #38A169'
             variant='outline'
-            w={'7.5vw'}
-            fontSize={'0.9vw'}
+            w={{base: '152px', lg: '152px', md: '152px', sm:'100px'}}
+            fontSize={{base: '18px', lg: '18px', md: '16px', sm:'12px'}}
+            
         >
                 Cadastrar
     

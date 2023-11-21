@@ -20,8 +20,9 @@ export const Ficha: React.FC<IFicha> = () => {
         <>
             <Flex
                 bg="rgba(248, 249, 250, 1)"
+                //bg='green.100'
                 w={'100vw'}
-                h={'100vh'}
+                h={'fit-content'}
             >
                 <Grid
                     templateAreas={`"nav header"

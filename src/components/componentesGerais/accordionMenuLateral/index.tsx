@@ -7,6 +7,7 @@ interface IAccordionMenu {
     nameSecondary: string,
     displayCustom: string,
     customIcon: React.ReactNode; // Nova propriedade para o ícone personalizado
+    handleToggle: () => void, 
 }
 
 export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
@@ -24,27 +25,29 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
             w={"100%"}
             //ml={4}
             pt={2}
+            
         >
-            <AccordionItem border="none" >
+            <AccordionItem border="none" onClick={props.handleToggle} >
                 <h2>
                     <AccordionButton _hover={{ focus: "none" }}
                         //pl={-2}
                         pr={6}
                     >
                         <Flex align="center" as="span" flex="1" fontSize="1em">
-                            {props.customIcon} {/* Utilize o ícone personalizado passado como prop */}
+                            {props.customIcon } {/* Utilize o ícone personalizado passado como prop */}
                             <Text
                                 pl={6}
-                                fontSize={'0.9vw'}
+                                //fontSize={'0.9vw'}
+                                fontSize={'14px'}
                                 display={props.displayCustom}
                             >{props.namePrimary}
                             </Text>
                         </Flex>
-                        <AccordionIcon display={props.displayCustom} />
+                        <AccordionIcon />
                     </AccordionButton>
                 </h2>
-                <AccordionPanel bg="rgb(226, 232, 240)" width="100%" height={"100%"} marginBottom={0}>
-                    <Center>{props.nameSecondary}</Center>
+                <AccordionPanel bg="rgb(226, 232, 240)" width="100%" height={"100%"} marginBottom={0} display={props.displayCustom}>
+                    <Center fontSize={'14px'} >{props.nameSecondary}</Center>
                 </AccordionPanel>
             </AccordionItem>
         </Accordion>

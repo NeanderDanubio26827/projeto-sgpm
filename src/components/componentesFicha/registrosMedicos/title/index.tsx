@@ -7,7 +7,8 @@ export const TitleRegistrosMedicos = () => {
     <Text 
     color={"rgba(0, 0, 0, 0.48)"} 
     fontWeight={'700'} 
-    fontSize={'1.2vw'}
+    //fontSize={'1.2vw'}
+    fontSize={'25px'}
     textDecoration={'underline'}
     >
         Registros Médicos

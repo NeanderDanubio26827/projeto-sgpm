@@ -8,7 +8,8 @@ export const DadosFicha = (props) => {
         gap={5}         
         align={'center'}
         paddingLeft={6}
-        fontSize={'16px'}
+        //fontSize={'16px'}
+        fontSize = {{base: '16px', lg: '16px', md: '16px', sm: '12px'}}
         >
 
         <VStack 
