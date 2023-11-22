@@ -90,21 +90,24 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                             <br />
                             POLICIAL MILITAR
                         </Text>
-                        <Text
-                            color={"white"}
-                            /* width={'60vw'}
-                            height={"8vh"} */
-                            width={'224px'}
-                            height={'88px'}
-                            //fontSize={'0.9vw'}
-                            fontSize={'20px'}
-                            //fontWeight={800}
-                            display={!props.isOpen ? "visibility" : "none"}
-                            textAlign={"center"}
+                        <Link to="/">
 
-                        >
-                            SGPM
-                        </Text>
+                            <Text
+                                color={"white"}
+                                /* width={'60vw'}
+                                height={"8vh"} */
+                                width={'224px'}
+                                height={'88px'}
+                                //fontSize={'0.9vw'}
+                                fontSize={'20px'}
+                                //fontWeight={800}
+                                display={!props.isOpen ? "visibility" : "none"}
+                                textAlign={"center"}
+
+                            >
+                                SGPM
+                            </Text>
+                        </Link>
                     </Flex>
                     <Flex
                         color={"white"}
