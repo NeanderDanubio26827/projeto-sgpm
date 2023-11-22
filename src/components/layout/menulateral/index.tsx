@@ -9,6 +9,7 @@ import '../../border.modules.css';
 import React, { useState } from "react";
 import { IconeBusca } from "../../componentesGerais/iconesMenuLateral/iconeMenulateralBusca";
 import { IconeRelatorio } from "../../componentesGerais/iconesMenuLateral/iconeMenuLateralRelatorios";
+import { Link } from "react-router-dom";
 
 interface IMenuLateral {
     isOpen: boolean;
@@ -28,19 +29,19 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                     sm: props.isOpen ? "240px" : "0px",
                 }}
                 //w={props.isOpen ? "12vw" : "3vw"}
-                
+
                 transitionDuration="1.0s"
                 height={"full"}
                 //border={"1px solid red"}
                 bg={"#276749"}
                 borderRadius={"15px"}
                 display={{
-    
+
                     lg: "block",
                     md: "block",
                     sm: 'block',
                 }}
-                //opacity={{sm: '0.5'}}
+            //opacity={{sm: '0.5'}}
 
 
             >
@@ -53,12 +54,14 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                     justify={'center'}
 
                 >
-                    <Image src={Brasao}
-                        pt={4}
-                        //w={'8vw'}
-                        w={'164px'}
-                        display={{ base: "none", lg: 'flex', md: "flex", sm: 'block' }}
-                    />
+                    <Link to={'/'}>
+                        <Image src={Brasao}
+                            pt={4}
+                            //w={'8vw'}
+                            w={'164px'}
+                            display={{ base: "none", lg: 'flex', md: "flex", sm: 'block' }}
+                        />
+                    </Link>
                 </Flex>
 
                 <Flex
@@ -134,34 +137,37 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                             </Text>
                         </Flex>
 
-                        <Flex
-                            p={6}
-                            pl={4}
+                        <Link to="/ficha">
+                            <Flex
+                                p={6}
+                                pl={4}
 
-                            _hover={{
-                                base:{
-                                transform: "scale(1.0)",
-                                bgColor: "white",
-                                textColor: "black",
-                                cursor: "pointer",
-                                transition: ".9s",
-                            }
-                        }
-                        }
+                                _hover={{
+                                    base: {
+                                        transform: "scale(1.0)",
+                                        bgColor: "white",
+                                        textColor: "black",
+                                        cursor: "pointer",
+                                        transition: ".9s",
+                                    }
+                                }
+                                }
 
-                            align={'center'}
-                            justify={'left'}
-                        >
-                            <IconeMinhaArea />
-                            <Text
-                                pl={10}
-                                display={props.isOpen ? "block" : "none"}
-                                //display={props.isOpen ? { base: "none", lg: 'block', md: "none", sm: 'none' } : "none"}
-                                //fontSize={'0.9vw'}
-                                fontSize={'14px'}
-                            >Minha área
-                            </Text>
-                        </Flex>
+                                align={'center'}
+                                justify={'left'}
+                            >
+                                <IconeMinhaArea />
+
+                                <Text
+                                    pl={10}
+                                    display={props.isOpen ? "block" : "none"}
+                                    //display={props.isOpen ? { base: "none", lg: 'block', md: "none", sm: 'none' } : "none"}
+                                    //fontSize={'0.9vw'}
+                                    fontSize={'14px'}
+                                >Minha área
+                                </Text>
+                            </Flex>
+                        </Link>
                     </Flex>
                 </Flex>
 

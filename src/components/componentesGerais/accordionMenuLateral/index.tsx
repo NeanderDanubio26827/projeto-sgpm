@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionItem, AccordionButton, Flex, AccordionIcon, AccordionPanel, Center, Icon } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
 
 interface IAccordionMenu {
     namePrimary: string,
@@ -29,12 +30,11 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
         >
             <AccordionItem border="none" onClick={props.handleToggle} >
                 <h2>
-                    <AccordionButton _hover={{ focus: "none" }}
-                        //pl={-2}
+                    <AccordionButton _hover={{ focus: "none" }}                        
                         pr={6}
                     >
                         <Flex align="center" as="span" flex="1" fontSize="1em">
-                            {props.customIcon } {/* Utilize o ícone personalizado passado como prop */}
+                        {props.customIcon } {/* Utilize o ícone personalizado passado como prop */}
                             <Text
                                 pl={6}
                                 //fontSize={'0.9vw'}
