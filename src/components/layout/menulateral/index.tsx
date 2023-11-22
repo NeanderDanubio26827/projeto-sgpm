@@ -28,18 +28,19 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                     sm: props.isOpen ? "240px" : "0px",
                 }}
                 //w={props.isOpen ? "12vw" : "3vw"}
-                //minW={'200px'}
+                
                 transitionDuration="1.0s"
                 height={"full"}
                 //border={"1px solid red"}
                 bg={"#276749"}
                 borderRadius={"15px"}
                 display={{
-                    //base: props.isOpen ? 'block' : 'none',
+    
                     lg: "block",
                     md: "block",
                     sm: 'block',
                 }}
+                //opacity={{sm: '0.5'}}
 
 
             >
@@ -79,7 +80,7 @@ export const MenuLateral: React.FC<IMenuLateral> = (props) => {
                             //fontSize={'0.9vw'}
                             fontSize={'20px'}
                             textAlign={"center"}
-                            //display={props.isOpen ? "visibility" : "none"}
+                            fontWeight={500}
                             display={props.isOpen ? { base: "none", lg: 'block', md: "block", sm: 'block' } : "none"}
                         >
                             SISTEMA DE GESTÃO

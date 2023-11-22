@@ -20,9 +20,9 @@ interface ITable {
 export const TableFicha: React.FC<ITable> = (props) => {
     return (
         <TableContainer
-            p={0}
+            //p={0}
             pt={4}
-            w={props.isOpen ? "79vw" : "90vw"}
+            w={ props.isOpen ? "79vw" : "89vw" }
             transitionDuration="1.0s"
             border={'1px solid rgba(234, 236, 240, 1'}
             

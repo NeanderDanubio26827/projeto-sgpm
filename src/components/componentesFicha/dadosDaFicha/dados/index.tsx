@@ -4,19 +4,18 @@ import { Flex, HStack, Text, VStack } from "@chakra-ui/react";
 export const DadosFicha = (props) => {
   return (
     <>
-      <HStack 
-        gap={5}         
+      <HStack
+        gap={5}
         align={'center'}
-        paddingLeft={6}
-        //fontSize={'16px'}
-        fontSize = {{base: '16px', lg: '16px', md: '16px', sm: '12px'}}
-        >
+        fontSize={{ base: '16px', lg: '16px', md: '16px', sm: '12px' }}
+        {...props}
+      >
 
-        <VStack 
-        align={'flex-start'} 
-        //justifyContent={'center'}
-        //border={'1px solid black'}
-        paddingLeft={6} 
+        <VStack
+          align={'flex-start'}
+          //justifyContent={'center'}
+          //border={'1px solid black'}
+          //paddingLeft={6}
         >
           <Flex>
             <Text fontWeight={700}>Posto/Grad: </Text>
@@ -36,9 +35,9 @@ export const DadosFicha = (props) => {
           </Flex>
         </VStack>
 
-        <VStack 
-        align={'flex-start'}
-        paddingLeft={6} 
+        <VStack
+          align={'flex-start'}
+          //paddingLeft={6}
         >
           <Flex>
             <Text fontWeight={700}>Capacidade Laborativa:</Text>
@@ -57,7 +56,7 @@ export const DadosFicha = (props) => {
             <Text>20 registros - 100 dias</Text>
           </Flex>
         </VStack>
-      
+
       </HStack>
     </>
   );

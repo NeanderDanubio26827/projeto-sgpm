@@ -14,6 +14,7 @@ export const ButtonSelecionar = () => {
                 color={'rgba(160, 174, 192, 1)'}
                 _hover={{ textDecoration: 'none' }}
                 fontWeight={500}
+                fontSize={{ lg: '14px', md: '14px', sm: '12px' }}         
                 
             >
                 Selecionar

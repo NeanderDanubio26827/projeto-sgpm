@@ -23,14 +23,16 @@ export const HomePrincipal: React.FC<IHomePrincipal> = () => {
             <Flex
                 bg="rgba(248, 249, 250, 1)"
                 w={'content'}
+                
                 h={'content'}
+                
             >
                 <Grid
                     templateAreas={`"nav header"
                                     "nav main"
                                     "nav footer"`}
                     gap={{lg: 8, md: 8, sm: 2}}
-                    mt={4}
+                    mt={{lg:4, md: 4, sm: 2}}
                     ml={{lg:4, md: 4, sm: 0}}
                     mr={{lg:4, md: 4, sm: 0}}
                 >

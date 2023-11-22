@@ -46,7 +46,13 @@ export const AccordionMenuLateral: React.FC<IAccordionMenu> = (props) => {
                         <AccordionIcon />
                     </AccordionButton>
                 </h2>
-                <AccordionPanel bg="rgb(226, 232, 240)" width="100%" height={"100%"} marginBottom={0} display={props.displayCustom}>
+                <AccordionPanel 
+                bg="rgb(226, 232, 240)" 
+                width="100%" 
+                height={"100%"} 
+                marginBottom={0} 
+                display={props.displayCustom}
+                >
                     <Center fontSize={'14px'} >{props.nameSecondary}</Center>
                 </AccordionPanel>
             </AccordionItem>

@@ -10,7 +10,12 @@ export const HeaderRegistrosMedicos = () => {
 
     return (
         <>
-            <HStack spacing={4} position={'absolute'} left={8}>
+            <HStack 
+            spacing={4} 
+            position={{lg:'absolute', md:'absolute', sm:'relative'}}              
+            left={{lg: 8 , md: 8, sm: 1}}         
+            
+            >
                 <ButtonFilter />
                 <ButtonSelecionar />
                 <InputBuscaFicha />
@@ -18,7 +23,12 @@ export const HeaderRegistrosMedicos = () => {
 
             </HStack>
 
-            <HStack marginLeft={'auto'} marginRight={4}>
+            <HStack 
+            
+            marginLeft={{lg:'auto', md:'auto', sm: '0'}} 
+            marginRight={4}
+            
+            >
                 <ButtonExportar />
             </HStack>
 
